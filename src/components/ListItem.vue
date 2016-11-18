@@ -8,7 +8,7 @@
             -->
         </aside>
 
-        <a class="readinglist-item-link">Python Classes in Depth - Raymond Hettinger</a>
+        <list-header title="" />
 
         <aside class="remove-wrapper">
             <i class="fa fa-close"></i>
@@ -54,11 +54,13 @@
 </style>
 
 <script>
+
+    import ListHeader from './ListHeader';
+
     export default {
-      data () {
-        return {
-        }
-      }
+        props: ['title'],
+        components: {
+            ListHeader
+        },
     }
 </script>
-

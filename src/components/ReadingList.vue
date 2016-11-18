@@ -1,12 +1,16 @@
 <template>
-    <ul class="readinglist-list">
-        <list-item v-for="list in readinglists" />
-    </ul>
+
+    <section class="readinglist">
+        <ul class="readinglist-list">
+            <list-item v-for="list in readinglists" :title="list.title"></list-item>
+        </ul>
+    </section>
+
 </template>
 
 <style scoped>
 
-    section {
+    section.readinglist {
 
         height: 90vh;
         padding: 40px 40px; 
@@ -33,10 +37,15 @@
 
         text-align: center;
     }
+
 </style>
 
 <script>
-    export default {
+    import ListItem from './ListItem';
 
+    export default {
+        components: {
+            ListItem
+        },
     };
 </script>

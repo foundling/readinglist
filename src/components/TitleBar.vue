@@ -4,12 +4,12 @@
             <i class="fa fa-share-alt"></i>
             <i class="fa fa-floppy-o"></i>
         </aside>
-            <h1>Reading List</h1>
+        <h1>{{ title }}</h1>
         <aside class="blank-wrapper"></aside>
     </header>
 </template>
 
-</style>
+<style scoped>
     header {
 
         display: flex;
@@ -43,7 +43,8 @@
 
 </style>
 
-</script>
+<script>
     export default {
+        props: ['title'],
     };
 </script>

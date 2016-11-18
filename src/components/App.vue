@@ -1,13 +1,15 @@
 <template>
+    <div class="app-container">
+        <title-bar title="Reading List"></title-bar>
+        <reading-list :readinglist="readinglist"></reading-list>
+    </div>
 </template>
 
-<script>
-export default {
-  components: {}
-}
-</script>
-
 <style>
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
 
     html, body {
 
@@ -28,29 +30,34 @@ export default {
 
 
     header,
-    section,
     footer,
-    section ul li {
-       
-       width: 100%; 
-
+    section,
+    li.readinglist-item {
+       width: 100vw; 
     }
 
-section {
-
-    height: 90vh;
-    padding: 40px 40px; 
-    background: whitesmoke;
-
-}
-
-ul {
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-
-
 </style>
+
+<script>
+
+    import TitleBar from './TitleBar'; 
+    import ReadingList from './ReadingList'; 
+
+    export default {
+        components: {
+            TitleBar,
+            ReadingList
+        },
+        data: function() {
+            return {
+                readinglist: [
+                    {
+                        title: 'Python Classes in Depth - Raymond Hettinger',
+                        link: 'href://google.com',
+                    }
+                ]
+            };
+        }
+    };
+
+</script>

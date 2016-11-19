@@ -8,7 +8,7 @@
             -->
         </aside>
 
-        <list-header title="" />
+        <list-header :title="item.title"></list-header>
 
         <aside class="remove-wrapper">
             <i class="fa fa-close"></i>
@@ -58,7 +58,7 @@
     import ListHeader from './ListHeader';
 
     export default {
-        props: ['title'],
+        props: ['item'],
         components: {
             ListHeader
         },

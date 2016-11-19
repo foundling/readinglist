@@ -2,7 +2,7 @@
 
     <section class="readinglist">
         <ul class="readinglist-list">
-            <list-item v-for="list in readinglists" :title="list.title"></list-item>
+            <list-item v-for="item in list" :item="item"></list-item>
         </ul>
     </section>
 
@@ -44,6 +44,7 @@
     import ListItem from './ListItem';
 
     export default {
+        props: ['list'],
         components: {
             ListItem
         },

@@ -1,7 +1,7 @@
 <template>
     <div class="app-container">
         <title-bar title="Reading List"></title-bar>
-        <reading-list :readinglist="readinglist"></reading-list>
+        <reading-list :list="list"></reading-list>
     </div>
 </template>
 
@@ -55,11 +55,11 @@
         },
         data: function() {
             return {
-                readinglist: [
-                    {
+                list: [
+                {
                         title: 'Python Classes in Depth - Raymond Hettinger',
                         link: 'href://google.com',
-                    }
+                }
                 ]
             };
         }

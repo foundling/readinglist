@@ -18,14 +18,15 @@
 
         background: white;
         height: 10vh;
-         
+
     }
 
     header h1 {
 
+        width: calc(100% - 120px);
+
         font-size: 1.3em;
         text-shadow: 3px 3px 0px lightgray;
-        width: calc(100% - 120px);
         text-align: center;
 
     }

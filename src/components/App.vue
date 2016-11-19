@@ -36,6 +36,11 @@
        width: 100vw; 
     }
 
+    header, 
+    section {
+
+    }
+
 </style>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-    <li v-bind:style="styleObject" class="readinglist-item">
+    <li v-bind:style="itemColor" class="readinglist-item">
 
         <aside class="toggle-read-wrapper">
             <i class="fa fa-bookmark-o"></i>
@@ -61,9 +61,10 @@
         },
         data: function() {
             return {
-                styleObject: {
+                itemColor: {
                     background: appColors[this.index]
                 },
+                read: false, 
             };
         },
         components: {

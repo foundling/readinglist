@@ -4,6 +4,7 @@
 
         <title-bar title="Reading List"></title-bar>
         <reading-list :list="list"></reading-list>
+        <controls></controls>
 
     </div>
 
@@ -37,11 +38,22 @@
     footer,
     section {
        width: 100vw; 
+       position: fixed;
     }
 
-    header, 
-    section {
+    header {
+        top: 0px;
+        left: 0px;
+    }
 
+    section {
+        top: 10vh;
+        left: 0px;
+    }
+
+    footer {
+        bottom: 0px;
+        left: 0px;
     }
 
 </style>
@@ -50,11 +62,13 @@
 
     import TitleBar from './TitleBar'; 
     import ReadingList from './ReadingList'; 
+    import Controls from './Controls';
 
     export default {
         components: {
             TitleBar,
-            ReadingList
+            ReadingList,
+            Controls
         },
         data: function() {
             return {

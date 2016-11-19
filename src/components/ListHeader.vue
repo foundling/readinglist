@@ -1,5 +1,7 @@
 <template>
-    <a class="readinglist-item-link" v-bind:href="link">{{title}}</a>
+    <a class="readinglist-item-link" 
+        v-bind:href="link">{{ title }}
+    </a>
 </template>
 
 <style scoped>

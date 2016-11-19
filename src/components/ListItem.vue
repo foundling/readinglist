@@ -1,5 +1,5 @@
 <template>
-    <li class="readinglist-item">
+    <li v-bind:style="styleObject" class="readinglist-item">
 
         <aside class="toggle-read-wrapper">
             <i class="fa fa-bookmark-o"></i>
@@ -21,6 +21,7 @@
     li.readinglist-item {
 
         height: 10vh;
+        width: 100%;
         overflow-x: scroll;
 
         display: flex;
@@ -29,10 +30,6 @@
 
         white-space: nowrap;
 
-    }
-
-    a.readinglist-item-link {
-        width: 60%;
     }
 
     aside.toggle-read-wrapper {
@@ -56,9 +53,19 @@
 <script>
 
     import ListHeader from './ListHeader';
+    import appColors from '../plugins/colors';
 
     export default {
-        props: ['item'],
+        props: ['item', 'index' ],
+        created: function() {
+        },
+        data: function() {
+            return {
+                styleObject: {
+                    background: appColors[this.index]
+                },
+            };
+        },
         components: {
             ListHeader
         },

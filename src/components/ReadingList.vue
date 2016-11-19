@@ -2,7 +2,11 @@
 
     <section class="readinglist">
         <ul class="readinglist-list">
-            <list-item v-for="item in list" :item="item"></list-item>
+            <list-item 
+                v-for="(item, index) in list" 
+                :item="item" 
+                :index="index">
+            </list-item>
         </ul>
     </section>
 
@@ -44,9 +48,11 @@
     import ListItem from './ListItem';
 
     export default {
+
         props: ['list'],
         components: {
             ListItem
-        },
+        }
+
     };
 </script>

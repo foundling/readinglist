@@ -1,4 +1,5 @@
 <template>
+
     <header>
         <aside class="share-wrapper">
             <i class="fa fa-share-alt"></i>
@@ -7,6 +8,7 @@
         <h1>{{ title }}</h1>
         <aside class="blank-wrapper"></aside>
     </header>
+
 </template>
 
 <style scoped>

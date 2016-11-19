@@ -1,8 +1,11 @@
 <template>
-    <a v-bind:href="link">{{title}}</a>
+    <a class="readinglist-item-link" v-bind:href="link">{{title}}</a>
 </template>
 
 <style scoped>
+    a.readinglist-item-link {
+        width: 60%;
+    }
 </style>
 
 <script>

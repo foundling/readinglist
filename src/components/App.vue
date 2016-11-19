@@ -1,8 +1,12 @@
 <template>
+
     <div class="app-container">
+
         <title-bar title="Reading List"></title-bar>
         <reading-list :list="list"></reading-list>
+
     </div>
+
 </template>
 
 <style>
@@ -31,8 +35,7 @@
 
     header,
     footer,
-    section,
-    li.readinglist-item {
+    section {
        width: 100vw; 
     }
 
@@ -56,10 +59,10 @@
         data: function() {
             return {
                 list: [
-                {
-                        title: 'Python Classes in Depth - Raymond Hettinger',
-                        link: 'href://google.com',
-                }
+                    {
+                            title: 'Python Classes in Depth - Raymond Hettinger',
+                            link: 'href://google.com',
+                    }
                 ]
             };
         }

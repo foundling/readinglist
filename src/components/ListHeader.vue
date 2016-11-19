@@ -1,5 +1,7 @@
 <template>
-    <a class="readinglist-item-link" 
+    <a 
+        class="readinglist-item-link" 
+        v-bind:class="{read: read}"
         v-bind:href="link">{{ title }}
     </a>
 </template>
@@ -8,11 +10,14 @@
     a.readinglist-item-link {
         width: 60%;
     }
+    a.read {
+        opacity: 0.2;
+    }
 </style>
 
 <script>
     export default {
-        props: ['title', 'link'],
+        props: ['title', 'link', 'read'],
     }
 </script>
 

@@ -76,7 +76,51 @@
                     {
                             title: 'Python Classes in Depth - Raymond Hettinger',
                             link: 'href://google.com',
-                    }
+                    },
+                    {
+                            title: 'Python Classes in Depth - Raymond Hettinger',
+                            link: 'href://google.com',
+                    },
+                    {
+                            title: 'Python Classes in Depth - Raymond Hettinger',
+                            link: 'href://google.com',
+                    },
+                    {
+                            title: 'Python Classes in Depth - Raymond Hettinger',
+                            link: 'href://google.com',
+                    },
+                    {
+                            title: 'Python Classes in Depth - Raymond Hettinger',
+                            link: 'href://google.com',
+                    },
+                    {
+                            title: 'Python Classes in Depth - Raymond Hettinger',
+                            link: 'href://google.com',
+                    },
+                    {
+                            title: 'Python Classes in Depth - Raymond Hettinger',
+                            link: 'href://google.com',
+                    },
+                    {
+                            title: 'Python Classes in Depth - Raymond Hettinger',
+                            link: 'href://google.com',
+                    },
+                    {
+                            title: 'Python Classes in Depth - Raymond Hettinger',
+                            link: 'href://google.com',
+                    },
+                    {
+                            title: 'Python Classes in Depth - Raymond Hettinger',
+                            link: 'href://google.com',
+                    },
+                    {
+                            title: 'Python Classes in Depth - Raymond Hettinger',
+                            link: 'href://google.com',
+                    },
+                    {
+                            title: 'Python Classes in Depth - Raymond Hettinger',
+                            link: 'href://google.com',
+                    },
                 ]
             };
         }

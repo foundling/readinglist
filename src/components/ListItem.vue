@@ -1,14 +1,16 @@
 <template>
-    <li v-bind:style="itemColor" class="readinglist-item">
+    <li 
+        v-bind:style="itemColor" 
+        class="readinglist-item">
 
         <aside class="toggle-read-wrapper">
-            <i class="fa fa-bookmark-o"></i>
-            <!--
-            <i class="fa fa-bookmark"></i>
-            -->
+            <i 
+                class="fa"
+                @click="toggleRead"
+                v-bind:class="{'fa-bookmark': read, 'fa-bookmark-o': !read}">
         </aside>
 
-        <list-header :title="item.title"></list-header>
+        <list-header :read="read" :title="item.title"></list-header>
 
         <aside class="remove-wrapper">
             <i class="fa fa-close"></i>
@@ -56,6 +58,7 @@
     import appColors from '../plugins/colors';
 
     export default {
+        name: 'listItem',
         props: ['item', 'index' ],
         created: function() {
         },
@@ -64,8 +67,13 @@
                 itemColor: {
                     background: appColors[this.index]
                 },
-                read: false, 
+                read: true, 
             };
+        },
+        methods: {
+            toggleRead: function() {
+                this.read = !this.read;
+            }
         },
         components: {
             ListHeader

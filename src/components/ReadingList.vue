@@ -16,7 +16,7 @@
 
     section.readinglist {
 
-        height: calc(90vh - 60px);
+        height: calc(90vh);
         padding: 20px; 
         background: whitesmoke;
 
@@ -26,7 +26,6 @@
 
         width: 100%;
         height: 100%;
-        max-height: calc(90vh - 80px);
         background: white;
 
         overflow-y: scroll;
@@ -35,6 +34,7 @@
 
         margin: 0 auto;
         padding: 0px;
+        margin-bottom: 4px;
 
         box-shadow: 4px 4px 0px;
 

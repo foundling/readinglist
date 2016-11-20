@@ -1,5 +1,13 @@
 const appColors = [
-
+    'snow',
+    'aliceblue',
+    'aquamarine',
+    'springgreen',
+    'violet',
+    'tomato',
+    'red',
+    'orange',
+    'yellow',
     'aqua',
     'aquamarine',
     'yellow',

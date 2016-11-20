@@ -10,7 +10,7 @@
 
     footer {
         background: whitesmoke;
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -19,7 +19,7 @@
     button.add-item {
         user-select: none;
         height: 60px;
-        width: 80px;
+        width: 60px;
         background: transparent;
         border: none;
         padding: 0px;

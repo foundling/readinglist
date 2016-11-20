@@ -1,9 +1,12 @@
-import Vue from 'vue'
-import App from './components/App'
+import Vue from 'vue';
+import App from './components/App';
+import Store from './store';
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  template: '<App/>',
-  components: { App }
-})
+const app = new Vue({
+    el: '#app',
+    template: '<App/>',
+    components: { App }
+});
+
+console.log(app);
+//app.store = new Store(app);

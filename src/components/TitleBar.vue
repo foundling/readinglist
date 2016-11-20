@@ -6,7 +6,9 @@
             <i class="fa fa-floppy-o"></i>
         </aside>
         <h1>{{ title }}</h1>
-        <aside class="blank-wrapper"></aside>
+        <aside class="blank-wrapper">
+        <i class="fa fa-plus"></i>
+        </aside>
     </header>
 
 </template>

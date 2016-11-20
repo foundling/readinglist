@@ -4,7 +4,6 @@
 
         <title-bar title="Reading List"></title-bar>
         <reading-list :list="list"></reading-list>
-        <controls></controls>
 
     </div>
 
@@ -61,49 +60,18 @@
 
     import TitleBar from './TitleBar'; 
     import ReadingList from './ReadingList'; 
-    import Controls from './Controls';
 
     export default {
         components: {
             TitleBar,
             ReadingList,
-            Controls
+        },
+        created: function() {
+            //console.log(this);
         },
         data: function() {
             return {
                 list: [
-                    {
-                            title: 'Python Classes in Depth - Raymond Hettinger',
-                            link: 'href://google.com',
-                    },
-                    {
-                            title: 'Python Classes in Depth - Raymond Hettinger',
-                            link: 'href://google.com',
-                    },
-                    {
-                            title: 'Python Classes in Depth - Raymond Hettinger',
-                            link: 'href://google.com',
-                    },
-                    {
-                            title: 'Python Classes in Depth - Raymond Hettinger',
-                            link: 'href://google.com',
-                    },
-                    {
-                            title: 'Python Classes in Depth - Raymond Hettinger',
-                            link: 'href://google.com',
-                    },
-                    {
-                            title: 'Python Classes in Depth - Raymond Hettinger',
-                            link: 'href://google.com',
-                    },
-                    {
-                            title: 'Python Classes in Depth - Raymond Hettinger',
-                            link: 'href://google.com',
-                    },
-                    {
-                            title: 'Python Classes in Depth - Raymond Hettinger',
-                            link: 'href://google.com',
-                    },
                     {
                             title: 'Python Classes in Depth - Raymond Hettinger',
                             link: 'href://google.com',

@@ -60,6 +60,7 @@
 
     import TitleBar from './TitleBar'; 
     import ReadingList from './ReadingList'; 
+    import ListItem from '../models/ListItem';
 
     export default {
         components: {
@@ -78,7 +79,12 @@
                     },
                 ]
             };
-        }
+        },
+        events: {
+            'add new list item': function() {
+                this.$store.list.push(new ListItem);
+            },
+        },
     };
 
 </script>

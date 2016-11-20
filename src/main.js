@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import App from './components/App';
-import Store from './store';
+
+import Vuex from 'vuex';
+Vue.use(Vuex);
 
 const app = new Vue({
     el: '#app',
+    store: new Vuex.Store(),
     template: '<App/>',
     components: { App }
 });
-
-console.log(app);
-//app.store = new Store(app);

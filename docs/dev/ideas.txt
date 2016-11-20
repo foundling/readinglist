@@ -1,0 +1,4 @@
+bookmark action:
+
+    grays out item.
+    on next load, the readinglist is resorted so that active things are at the top.

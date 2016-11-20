@@ -1,14 +1,20 @@
 <template>
 
     <header>
+
         <aside class="share-wrapper">
             <i class="fa fa-share-alt"></i>
             <i class="fa fa-floppy-o"></i>
         </aside>
+
         <h1>{{ title }}</h1>
-        <aside class="blank-wrapper">
-        <i class="fa fa-plus"></i>
+
+        <aside class="add-wrapper">
+            <i 
+                v-on:click="addListItem"
+                class="fa fa-plus"></i>
         </aside>
+
     </header>
 
 </template>
@@ -51,5 +57,10 @@
 <script>
     export default {
         props: ['title'],
+        methods: {
+            addListItem: function() {
+                this.$dispatch('add new list item');
+            }
+        },
     };
 </script>

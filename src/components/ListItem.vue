@@ -4,22 +4,28 @@
         class="readinglist-item">
 
         <aside 
-            class="toggle-read-wrapper">
+            class="toggle-read-write-wrapper">
             <i 
-                class="fa"
+                class="fa fa-bookmark"
+                v-on:click="toggleRead">
+            </i>
+            <i 
                 v-on:click="toggleRead"
-                v-bind:class="{
-                    'fa-bookmark': read, 
-                    'fa-bookmark-o': !read
-                }">
+                v-bind:class="{ invisible: read }"
+                class="fa fa-pencil">
+            </i>
         </aside>
 
-        <list-header :read="read" :title="item.title"></list-header>
+        <list-header 
+            :read="read" 
+            :title="item.title">
+        </list-header>
 
         <aside class="remove-wrapper">
             <i 
                 v-bind:class="{emphasis: read}"
-                class="fa fa-close"></i>
+                class="fa fa-close">
+            </i>
         </aside>
 
     </li>
@@ -27,6 +33,9 @@
 
 <style scoped>
 
+    .invisible {
+        visibility: hidden;
+    }
     .fa-bookmark,
     .fa-bookmark-o {
         padding: 10px;
@@ -36,7 +45,10 @@
     }
     .emphasis {
         color: red;
-        opacity: 0.5;
+    }
+
+    aside .emphasis {
+        opacity: 1;
     }
 
     li.readinglist-item {
@@ -55,12 +67,19 @@
 
     }
 
-    aside.toggle-read-wrapper {
-        margin-right: auto;
+    aside.toggle-read-write-wrapper {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 20%;
+
     }
 
     aside.remove-wrapper {
         margin-left: auto;
+        opacity: 0.2;
     }
 
     aside.toggle-read-wrapper,

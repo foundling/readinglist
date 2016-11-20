@@ -1,13 +1,17 @@
 <template>
     <li 
-        v-bind:style="itemColor" 
         class="readinglist-item">
 
-        <aside class="toggle-read-wrapper">
+        <aside 
+            class="toggle-read-wrapper">
             <i 
                 class="fa"
-                @click="toggleRead"
-                v-bind:class="{'fa-bookmark': read, 'fa-bookmark-o': !read}">
+                v-bind:style="itemColor"
+                v-on:click="toggleRead"
+                v-bind:class="{
+                    'fa-bookmark': !read, 
+                    'fa-bookmark-o': read
+                }">
         </aside>
 
         <list-header :read="read" :title="item.title"></list-header>
@@ -20,9 +24,20 @@
 </template>
 
 <style scoped>
+
+    .fa-bookmark,
+    .fa-bookmark-o {
+        padding: 10px;
+    }
+    .fa-bookmark {
+        background: white;
+    }
+
     li.readinglist-item {
 
-        height: 10vh;
+        /* https://github.com/scottjehl/Device-Bugs/issues/8 */
+        -webkit-transform: translate3d(0, 0, 0); 
+        height: calc(100%/ 5);
         width: 100%;
         overflow-x: scroll;
 
@@ -62,12 +77,17 @@
         props: ['item', 'index' ],
         created: function() {
         },
+        computed: {
+            itemColor: function() {
+                return {
+                    background: this.read ? 'transparent' : appColors[this.index],
+                    border: this.read ? '1px solid ' + appColors[this.index] : '1px solid transparent'  
+                };
+            }
+        },
         data: function() {
             return {
-                itemColor: {
-                    background: appColors[this.index]
-                },
-                read: true, 
+                read: false, 
             };
         },
         methods: {

@@ -38,7 +38,6 @@
     footer,
     section {
        width: 100vw; 
-       position: fixed;
     }
 
     header {
@@ -73,18 +72,6 @@
         data: function() {
             return {
                 list: [
-                    {
-                            title: 'Python Classes in Depth - Raymond Hettinger',
-                            link: 'href://google.com',
-                    },
-                    {
-                            title: 'Python Classes in Depth - Raymond Hettinger',
-                            link: 'href://google.com',
-                    },
-                    {
-                            title: 'Python Classes in Depth - Raymond Hettinger',
-                            link: 'href://google.com',
-                    },
                     {
                             title: 'Python Classes in Depth - Raymond Hettinger',
                             link: 'href://google.com',

@@ -1,1 +1,4 @@
+
+[FIXED]
 overflow colors problematic on mobile.
+https://github.com/scottjehl/Device-Bugs/issues/8

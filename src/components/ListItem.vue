@@ -6,12 +6,7 @@
         <aside 
             class="toggle-read-write-wrapper">
             <i 
-                class="fa fa-bookmark"
-                v-on:click="toggleRead">
-            </i>
-            <i 
-                v-on:click="toggleRead"
-                v-bind:class="{ invisible: read }"
+                v-on:click="toggleEditModeOn"
                 class="fa fa-pencil">
             </i>
         </aside>
@@ -23,8 +18,8 @@
 
         <aside class="remove-wrapper">
             <i 
-                v-bind:class="{emphasis: read}"
-                class="fa fa-close">
+                class="fa fa-close"
+                v-bind:class="{ 'grayed-out': !read }">
             </i>
         </aside>
 
@@ -33,23 +28,20 @@
 
 <style scoped>
 
-    .invisible {
-        visibility: hidden;
+    .grayed-out {
+        opacity: 0.2;
     }
-    .fa-bookmark,
-    .fa-bookmark-o {
-        padding: 10px;
+    .fa-bookmark-o,
+    .fa-pencil {
+        width: 40%;
+        margin: 0px;
+        padding: 0px;
     }
-    .fa-bookmark {
-        background: white;
-    }
+
     .emphasis {
         color: red;
     }
 
-    aside .emphasis {
-        opacity: 1;
-    }
 
     li.readinglist-item {
 
@@ -79,7 +71,6 @@
 
     aside.remove-wrapper {
         margin-left: auto;
-        opacity: 0.2;
     }
 
     aside.toggle-read-wrapper,
@@ -105,7 +96,7 @@
         computed: {
             itemColor: function() {
                 return {
-                    background: this.read ? 'transparent' : appColors[this.index],
+                    background: this.read ? 'transparent' : appColors[this.index + 4],
                 };
             }
         },
@@ -117,6 +108,9 @@
         methods: {
             toggleRead: function() {
                 this.read = !this.read;
+            },
+            toggleEditModeOn: function() {
+                this.editMode = true;
             }
         },
         components: {

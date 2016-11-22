@@ -13,6 +13,8 @@
 
     ::-webkit-scrollbar {
         display: none;
+        height: 0px;
+        width: 0px;
     }
 
     html, body {

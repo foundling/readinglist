@@ -1,6 +1,7 @@
 <template>
 
     <section class="readinglist">
+        <modal></modal>
         <ul class="readinglist-list">
             <list-item 
                 v-for="(item, index) in list" 
@@ -47,12 +48,14 @@
 
 <script>
     import ListItem from './ListItem';
+    import Modal from './Modal';
 
     export default {
 
         props: ['list'],
         components: {
-            ListItem
+            ListItem,
+            Modal
         }
 
     };

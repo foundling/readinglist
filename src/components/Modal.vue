@@ -1,5 +1,7 @@
 <template>
-    <section class="modal">
+    <section 
+        v-bind:class="{invisible: !visible}"
+        class="modal">
         <section class="readinglist-edit-modal">
             <textarea 
                 value="item.title"
@@ -16,26 +18,33 @@
                 class="commit-edit">
                 Save
             </button>
+            <button 
+                v-on:click="cancelEdit"
+                class="commit-edit">
+                Cancel
+            </button>
         </section>
         <div class="blur-bg"></div>
     </section> 
 </template>
 
 <style scoped>
+    .invisible {
+        visibility: hidden;
+    }
     section.modal {
 
-        height: 100%;
-        width: 100%;
+        height: 100vh;
+        width: 100vw;
 
-        position: absolute;
-        top: 0px;
-        left: 0px;
+        position: fixed;
+        top: 0;
+        left: 0;
         background: rgba(40,40,40,0.5);
 
-        display: flex;
         flex-direction: column;
         align-items: center;
-        vertical-align: center;
+        justify-content: center;
 
         z-index: 100;
     }
@@ -53,7 +62,7 @@
     section.readinglist-edit-modal {
 
         overflow: scroll;
-        height: auto;
+        height: 75%;
         padding: 5%;
         width: 80%;
         margin: 0 auto;
@@ -100,8 +109,17 @@
 
 <script>
     export default {
+        computed: {
+            visible () {
+                return this.$store.getters.modalVisible;
+            }
+        },
         methods: {
-            commitEdit: () => {
+            commitEdit() {
+                this.$store.dispatch('toggleModal');
+            },
+            cancelEdit() {
+                this.$store.dispatch('toggleModal');
             }
         }
     };

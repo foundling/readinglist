@@ -1,7 +1,6 @@
 <template>
 
     <section class="readinglist">
-        <modal></modal>
         <ul class="readinglist-list">
             <list-item 
                 v-for="(item, index) in list" 

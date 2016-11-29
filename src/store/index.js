@@ -1,8 +1,28 @@
+import Vue from 'vue';
 import Vuex from 'vuex';
 
+Vue.use(Vuex);
 
-export default function (app) {
-    console.log(app);
-    app.use(Vuex);
-    return new Vuex.Store();
-}
+const store = new Vuex.Store({
+    state: {
+        ui: {
+            modalVisible: false
+        }
+    }, 
+    mutations: {
+        TOGGLE_MODAL(state) {
+            state.ui.modalVisible = !state.ui.modalVisible;
+        }
+    },
+    actions: {
+        toggleModal({commit}) {
+            commit('TOGGLE_MODAL');
+        }
+    },
+    getters: {
+        modalVisible: state => state.ui.modalVisible
+    }
+
+});
+
+export default store;

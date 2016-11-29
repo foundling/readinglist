@@ -4,6 +4,7 @@
 
         <title-bar title="Reading List"></title-bar>
         <reading-list :list="list"></reading-list>
+        <modal></modal>
 
     </div>
 
@@ -63,29 +64,25 @@
     import TitleBar from './TitleBar'; 
     import ReadingList from './ReadingList'; 
     import ListItem from '../models/ListItem';
+    import Modal from './Modal';
 
     export default {
         components: {
+
             TitleBar,
             ReadingList,
-        },
-        created: function() {
-            //console.log(this);
+            Modal
+
         },
         data: function() {
             return {
                 list: [
                     {
-                            title: 'Python Classes in Depth - Raymond Hettinger',
-                            link: 'href://google.com',
+                        title: 'Python Classes in Depth - Raymond Hettinger',
+                        link: 'href://google.com',
                     },
                 ]
             };
-        },
-        events: {
-            'add new list item': function() {
-                this.$store.list.push(new ListItem);
-            },
         },
     };
 

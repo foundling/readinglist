@@ -3,10 +3,9 @@
         v-bind:style="itemColor"
         class="readinglist-item">
 
-        <aside 
-            class="toggle-read-write-wrapper">
+        <aside class="toggle-read-write-wrapper">
             <i 
-                v-on:click="toggleEditModeOn"
+                v-on:click="toggleModal"
                 class="fa fa-pencil">
             </i>
         </aside>
@@ -22,7 +21,6 @@
                 v-bind:class="{ 'grayed-out': !read }">
             </i>
         </aside>
-
     </li>
 </template>
 
@@ -91,7 +89,11 @@
     export default {
         name: 'listItem',
         props: ['item', 'index' ],
-        created: function() {
+        data: function() {
+            return {
+                read: false, 
+                editMode: false
+            };
         },
         computed: {
             itemColor: function() {
@@ -100,17 +102,12 @@
                 };
             }
         },
-        data: function() {
-            return {
-                read: false, 
-            };
-        },
         methods: {
+            toggleModal: function() {
+                this.$store.dispatch('toggleModal');
+            },
             toggleRead: function() {
                 this.read = !this.read;
-            },
-            toggleEditModeOn: function() {
-                this.editMode = true;
             }
         },
         components: {

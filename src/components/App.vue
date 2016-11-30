@@ -5,6 +5,7 @@
         <title-bar title="Reading List"></title-bar>
         <reading-list :list="list"></reading-list>
         <edit-modal></edit-modal>
+        <confirm-modal></confirm-modal>
 
     </div>
 
@@ -64,26 +65,18 @@
     import TitleBar from './TitleBar'; 
     import ReadingList from './ReadingList'; 
     import ListItem from '../models/ListItem';
-    import { EditModal, ConfirmaModal} from './Modals';
+    import { EditModal, ConfirmModal} from './Modals';
 
     export default {
         components: {
 
             TitleBar,
             ReadingList,
-            EditModal
+            EditModal,
+            ConfirmModal
 
         },
-        data: function() {
-            return {
-                list: [
-                    {
-                        title: 'Python Classes in Depth - Raymond Hettinger',
-                        link: 'href://google.com',
-                    },
-                ]
-            };
-        },
+        data: function() { return {}; }
     };
 
 </script>

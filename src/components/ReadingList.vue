@@ -3,7 +3,7 @@
     <section class="readinglist">
         <ul class="readinglist-list">
             <list-item 
-                v-for="(item, index) in list" 
+                v-for="(item, index) in savedList" 
                 :item="item" 
                 :index="index">
             </list-item>
@@ -53,6 +53,14 @@
         props: ['list'],
         components: {
             ListItem
+        },
+        computed: {
+            savedList() {
+                return this.$store.getters.savedList
+            }, 
+            workingList() {
+                return this.$store.getters.workingList
+            } 
         }
 
     };

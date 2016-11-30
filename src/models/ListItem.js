@@ -1,6 +1,11 @@
-export default {
+export default function(options) {
 
-    title: null,
-    link: null
+    return {
+
+        title: options.title || '',
+        link: options.link || '',
+        read: options.read || false
+
+    };
 
 };

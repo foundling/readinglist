@@ -13,6 +13,13 @@
 
 <style>
 
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+        text-decoration: none;
+        color: black;
+    }
     ::-webkit-scrollbar {
         display: none;
         height: 0px;

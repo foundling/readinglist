@@ -7,6 +7,7 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
     state: {
         readingLists: {
+            currentlyEditing: null,
             saved: [
 
                 new ListItem({
@@ -34,19 +35,34 @@ const store = new Vuex.Store({
         }
     }, 
     mutations: {
-        TOGGLE_MODAL(state, name) {
-            state.ui.modals[name].visible = !state.ui.modals[name].visible;
+        OPEN_MODAL (state, { modalType, listType, listItemIndex }) {
+            state.ui.modals[modalType].visible = true;
+            state.readingLists.currentlyEditing = state.readingLists[listType][listItemIndex];
+        },
+        CLOSE_MODAL (state, { modalType }){
+            state.ui.modals[modalType].visible = false;
+        },
+        COMMIT_EDITED_LIST_ITEM(state, listItem) {
+            state.readingLists.currentlyEditing = listItem;
         }
+
     },
     actions: {
-        toggleModal({commit}, name) {
-            commit('TOGGLE_MODAL', name);
+        openModal({commit}, payload) {
+            commit('OPEN_MODAL', payload);
+        },
+        closeModal({commit}, payload) {
+            commit('CLOSE_MODAL', payload);
+        },
+        commitEditedListItem({commit}, payload){
+            commit('COMMIT_EDITED_LIST_ITEM', payload);
         }
     },
     getters: {
         modals: state => state.ui.modals, 
         savedList: state => state.readingLists.saved,
         workingList: state => state.readingLists.working,
+        currentlyEditing: state => state.readingLists.currentlyEditing
     }
 
 });

@@ -4,15 +4,27 @@
         class="readinglist-item">
 
         <aside class="toggle-read-write-wrapper">
-            <i 
-                v-on:click="toggleModal"
-                class="fa fa-pencil">
-            </i>
+
+            <button 
+                v-on:click="openModal"
+                class="edit-button">
+                <i class="fa fa-pencil"></i>
+            </button>
+
+            <button 
+                v-on:click="toggleRead"
+                class="bookmark-button">
+                <i 
+                    class="fa"
+                    v-bind:class="{'fa-bookmark-o': read, 'fa-bookmark': !read }"></i>
+            </button>
+
         </aside>
 
         <list-header 
             :read="read" 
-            :title="item.title">
+            :title="item.title"
+            :link="item.link">
         </list-header>
 
         <aside class="remove-wrapper">
@@ -26,28 +38,44 @@
 
 <style scoped>
 
-    .grayed-out {
-        opacity: 0.2;
-    }
-    .fa-bookmark-o,
-    .fa-pencil {
-        width: 40%;
+    button {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
         margin: 0px;
         padding: 0px;
+        background: none;
+    }
+    button:focus {
+        outline: none;
+    }
+    button.edit-button {
     }
 
-    .emphasis {
-        color: red;
+    i {
+        margin: 0px;
+        padding: 0px;
+        font-size: 1.3em;
     }
 
+    .grayed-out {
+        opacity: 0.8;
+    }
 
     li.readinglist-item {
 
-        /* https://github.com/scottjehl/Device-Bugs/issues/8 */
+        /*  
+            https://github.com/scottjehl/Device-Bugs/issues/8 
+        */
         -webkit-transform: translate3d(0, 0, 0); 
-        height: calc(100%/ 5);
+        height: calc(100% / 5);
         width: 100%;
         overflow-x: scroll;
+        margin: 0px;
+        padding: 0 5%;
 
         display: flex;
         align-items: center;
@@ -59,11 +87,12 @@
 
     aside.toggle-read-write-wrapper {
 
+        height: 100%;
+        width: 20%;
+
         display: flex;
         align-items: center;
         justify-content: center;
-
-        width: 20%;
 
     }
 
@@ -73,7 +102,7 @@
 
     aside.toggle-read-wrapper,
     aside.remove-wrapper {
-        width: 20%;    
+        width: 15%;    
     }
 
     a.readinglist-item-link {
@@ -100,11 +129,20 @@
                 return {
                     background: this.read ? 'transparent' : appColors[this.index + 4],
                 };
-            }
+            },
+
         },
         methods: {
-            toggleModal: function() {
-                this.$store.dispatch('toggleModal', 'EditModal');
+            openModal: function() {
+
+                const data = {
+                    modalType: 'EditModal', 
+                    listType: 'saved',
+                    listItemIndex: this.index
+                };
+
+                this.$store.dispatch('openModal', data);
+
             },
             toggleRead: function() {
                 this.read = !this.read;

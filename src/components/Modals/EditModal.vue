@@ -1,6 +1,6 @@
 <template>
     <section 
-        v-on:click="cancelEdit"
+        v-on:click.self="cancelEdit"
         v-bind:class="{invisible: !visible}"
         class="modal">
 
@@ -8,14 +8,14 @@
             class="readinglist-edit-modal">
 
             <textarea 
-                value="item.title"
-                placeholder="title" 
+                v-model="listItem.title"
+                placeholder="Title" 
                 rows="1"
                 class="modal title-input"></textarea>  
 
             <textarea 
-                value="item.link"
-                placeholder="link" 
+                v-bind:value="listItem.link"
+                placeholder="Link" 
                 rows="8"
                 class="modal link-input"></textarea>  
 
@@ -115,17 +115,41 @@
 
 <script>
     export default {
+        data: function() {
+            return {
+                name: 'EditModal',
+            };
+        },
         computed: {
             visible () {
                 return this.$store.getters.modals.EditModal.visible;
+            },
+            listItem () {
+                return this.$store.getters.currentlyEditing || {title: '', link: ''}; 
             }
+
         },
         methods: {
             commitEdit() {
-                this.$store.dispatch('toggleModal', 'EditModal')
+
+                const payload = {
+                    modalType: this.name
+                }; 
+
+                const updatedListItem = {
+                    title: this.$el.querySelector('.title-input').value,
+                    link: this.$el.querySelector('.link-input').value
+                };
+                this.$store.dispatch('commitEditedListItem', updatedListItem)
+                this.$store.dispatch('closeModal', payload)
             },
             cancelEdit() {
-                this.$store.dispatch('toggleModal', 'EditModal')
+
+                const payload = {
+                    modalType: this.name 
+                };
+
+                this.$store.dispatch('closeModal', payload)
             }
         }
     };

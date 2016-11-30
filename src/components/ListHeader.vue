@@ -1,5 +1,6 @@
 <template>
     <a 
+        target="_blank"
         class="readinglist-item-link" 
         v-bind:class="{read: read}"
         v-bind:href="link">{{ title }}
@@ -7,6 +8,9 @@
 </template>
 
 <style scoped>
+    a {
+        font-weight: 100;
+    }
     a.readinglist-item-link {
         width: 60%;
     }

@@ -29,7 +29,9 @@
 
         </section>
 
-        <div class="blur-bg"></div>
+        <div
+            v-on:click.self="cancelEdit"
+            class="blur-bg"></div>
 
     </section> 
 </template>

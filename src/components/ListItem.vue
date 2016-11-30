@@ -104,7 +104,7 @@
         },
         methods: {
             toggleModal: function() {
-                this.$store.dispatch('toggleModal');
+                this.$store.dispatch('toggleModal', 'EditModal');
             },
             toggleRead: function() {
                 this.read = !this.read;

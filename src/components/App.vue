@@ -64,7 +64,7 @@
     import TitleBar from './TitleBar'; 
     import ReadingList from './ReadingList'; 
     import ListItem from '../models/ListItem';
-    import EditModal from './EditModal';
+    import { EditModal, ConfirmaModal} from './Modals';
 
     export default {
         components: {

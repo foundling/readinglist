@@ -6,21 +6,28 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
     state: {
         ui: {
-            modalVisible: false
+            modals: {
+                EditModal: {
+                    visible: false
+                },
+                ConfirmModal: {
+                    visible: false
+                }
+            }
         }
     }, 
     mutations: {
-        TOGGLE_MODAL(state) {
-            state.ui.modalVisible = !state.ui.modalVisible;
+        TOGGLE_MODAL(state, name) {
+            state.ui.modals[name].visible = !state.ui.modals[name].visible;
         }
     },
     actions: {
-        toggleModal({commit}) {
-            commit('TOGGLE_MODAL');
+        toggleModal({commit}, name) {
+            commit('TOGGLE_MODAL', name);
         }
     },
     getters: {
-        modalVisible: state => state.ui.modalVisible
+        modals: state => state.ui.modals 
     }
 
 });

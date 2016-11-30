@@ -1,32 +1,36 @@
 <template>
     <section 
+        v-on:click="cancelEdit"
         v-bind:class="{invisible: !visible}"
         class="modal">
+
         <section 
-            v-on:click="cancelEdit"
             class="readinglist-edit-modal">
+
             <textarea 
                 value="item.title"
                 placeholder="title" 
                 rows="1"
                 class="modal title-input"></textarea>  
+
             <textarea 
                 value="item.link"
                 placeholder="link" 
                 rows="8"
                 class="modal link-input"></textarea>  
+
             <button 
                 v-on:click="commitEdit"
-                class="commit-edit">
-                Save
-            </button>
+                class="commit-edit">Save</button>
+
             <button 
                 v-on:click="cancelEdit"
-                class="commit-edit">
-                Cancel
-            </button>
+                class="commit-edit">Cancel</button>
+
         </section>
+
         <div class="blur-bg"></div>
+
     </section> 
 </template>
 
@@ -113,15 +117,15 @@
     export default {
         computed: {
             visible () {
-                return this.$store.getters.modalVisible;
+                return this.$store.getters.modals.EditModal.visible;
             }
         },
         methods: {
             commitEdit() {
-                this.$store.dispatch('toggleModal');
+                this.$store.dispatch('toggleModal', 'EditModal')
             },
             cancelEdit() {
-                this.$store.dispatch('toggleModal');
+                this.$store.dispatch('toggleModal', 'EditModal')
             }
         }
     };

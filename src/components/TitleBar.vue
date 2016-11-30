@@ -59,7 +59,6 @@
         props: ['title'],
         methods: {
             addListItem: function() {
-                this.$dispatch('add new list item');
             }
         },
     };

@@ -4,7 +4,7 @@
 
         <title-bar title="Reading List"></title-bar>
         <reading-list :list="list"></reading-list>
-        <modal></modal>
+        <edit-modal></edit-modal>
 
     </div>
 
@@ -64,14 +64,14 @@
     import TitleBar from './TitleBar'; 
     import ReadingList from './ReadingList'; 
     import ListItem from '../models/ListItem';
-    import Modal from './Modal';
+    import EditModal from './EditModal';
 
     export default {
         components: {
 
             TitleBar,
             ReadingList,
-            Modal
+            EditModal
 
         },
         data: function() {

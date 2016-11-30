@@ -47,14 +47,12 @@
 
 <script>
     import ListItem from './ListItem';
-    import Modal from './Modal';
 
     export default {
 
         props: ['list'],
         components: {
-            ListItem,
-            Modal
+            ListItem
         }
 
     };

@@ -2,7 +2,9 @@
     <section 
         v-bind:class="{invisible: !visible}"
         class="modal">
-        <section class="readinglist-edit-modal">
+        <section 
+            v-on:click="cancelEdit"
+            class="readinglist-edit-modal">
             <textarea 
                 value="item.title"
                 placeholder="title" 

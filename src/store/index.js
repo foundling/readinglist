@@ -43,7 +43,9 @@ const store = new Vuex.Store({
             state.ui.modals[modalType].visible = false;
         },
         COMMIT_EDITED_LIST_ITEM(state, listItem) {
-            state.readingLists.currentlyEditing = listItem;
+            console.log(listItem);
+            state.readingLists.currentlyEditing.title = listItem.title;
+            state.readingLists.currentlyEditing.link = listItem.link;
         }
 
     },

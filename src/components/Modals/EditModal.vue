@@ -8,7 +8,7 @@
             class="readinglist-edit-modal">
 
             <textarea 
-                v-model="listItem.title"
+                v-bind:value="listItem.title"
                 placeholder="Title" 
                 rows="1"
                 class="modal title-input"></textarea>  

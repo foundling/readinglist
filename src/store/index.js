@@ -13,6 +13,26 @@ const store = new Vuex.Store({
                 new ListItem({
                     title: 'Python Class talk by Raymond Hettinger',
                     link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg'
+                }),                
+                new ListItem({
+                    title: 'Python Class talk by Raymond Hettinger',
+                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg'
+                }),                
+                new ListItem({
+                    title: 'Python Class talk by Raymond Hettinger',
+                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg'
+                }),                
+                new ListItem({
+                    title: 'Python Class talk by Raymond Hettinger',
+                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg'
+                }),                
+                new ListItem({
+                    title: 'Python Class talk by Raymond Hettinger',
+                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg'
+                }),                
+                new ListItem({
+                    title: 'Python Class talk by Raymond Hettinger',
+                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg'
                 })                
 
             ],

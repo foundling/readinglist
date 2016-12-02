@@ -2,7 +2,7 @@
 
     <header>
 
-        <aside class="share-wrapper">
+        <aside class="settings-wrapper">
             <i class="fa fa-bars"></i>
         </aside>
 
@@ -21,6 +21,7 @@
 <style scoped>
     header {
 
+        padding: 10px 15px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -44,7 +45,14 @@
         width: 120px;
         display: flex;
         align-items: center;
-        justify-content: center;
+    }
+
+    header > aside.settings-wrapper {
+        justify-content: flex-start;
+    }
+
+    header > aside.add-wrapper {
+        justify-content: flex-end;
     }
 
     header > aside > i:nth-child(1) {

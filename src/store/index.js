@@ -12,27 +12,33 @@ const store = new Vuex.Store({
 
                 new ListItem({
                     title: 'Python Class talk by Raymond Hettinger',
-                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg'
+                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
+                    read: false
                 }),                
                 new ListItem({
                     title: 'Python Class talk by Raymond Hettinger',
-                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg'
+                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
+                    read: false
                 }),                
                 new ListItem({
                     title: 'Python Class talk by Raymond Hettinger',
-                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg'
+                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
+                    read: false
                 }),                
                 new ListItem({
                     title: 'Python Class talk by Raymond Hettinger',
-                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg'
+                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
+                    read: false
                 }),                
                 new ListItem({
                     title: 'Python Class talk by Raymond Hettinger',
-                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg'
+                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
+                    read: false
                 }),                
                 new ListItem({
                     title: 'Python Class talk by Raymond Hettinger',
-                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg'
+                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
+                    read: false
                 })                
 
             ],
@@ -66,6 +72,10 @@ const store = new Vuex.Store({
             console.log(listItem);
             state.readingLists.currentlyEditing.title = listItem.title;
             state.readingLists.currentlyEditing.link = listItem.link;
+        },
+        TOGGLE_READ(state, { index, read}) {
+            console.log('toggle_read');
+            state.readingLists.saved[index].read = read;
         }
 
     },
@@ -78,6 +88,9 @@ const store = new Vuex.Store({
         },
         commitEditedListItem({commit}, payload){
             commit('COMMIT_EDITED_LIST_ITEM', payload);
+        },
+        toggleRead({commit}, payload) {
+            commit('TOGGLE_READ', payload);
         }
     },
     getters: {

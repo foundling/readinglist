@@ -116,23 +116,30 @@
     import appColors from '../plugins/colors';
 
     export default {
-        name: 'listItem',
+        name: 'ListItem',
         props: ['item', 'index' ],
-        data: function() {
-            return {
-                read: false, 
-                editMode: false
-            };
-        },
         computed: {
+            read: function() {
+                return this.$store.state.readingLists.saved[this.index].read;
+            },
             itemColor: function() {
                 return {
                     background: this.read ? 'transparent' : appColors[this.index + 4],
                 };
             },
-
         },
         methods: {
+
+            toggleRead: function() {
+
+                const data = {
+                    index: this.index,
+                    read: !this.read
+                };
+
+                this.$store.dispatch('toggleRead', data);
+            },
+
             openModal: function() {
 
                 const data = {
@@ -143,10 +150,8 @@
 
                 this.$store.dispatch('openModal', data);
 
-            },
-            toggleRead: function() {
-                this.read = !this.read;
             }
+
         },
         components: {
             ListHeader

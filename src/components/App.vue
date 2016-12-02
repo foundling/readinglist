@@ -13,6 +13,10 @@
 
 <style>
 
+    html {
+        -webkit-tap-highlight-color: transparent;
+    }
+
     a:link,
     a:visited,
     a:hover,

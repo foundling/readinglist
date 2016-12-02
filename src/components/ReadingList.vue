@@ -17,7 +17,7 @@
     section.readinglist {
 
         height: calc(90vh);
-        padding: 20px; 
+        padding: 10px; 
         background: whitesmoke;
 
     }

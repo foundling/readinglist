@@ -1,0 +1,2 @@
+Make a single top-level control for settings, not share, save and add on the right.
+Make sure to catch edge case with the user-supplied link. (no www, no http etc).

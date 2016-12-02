@@ -3,8 +3,7 @@
     <header>
 
         <aside class="share-wrapper">
-            <i class="fa fa-share-alt"></i>
-            <i class="fa fa-floppy-o"></i>
+            <i class="fa fa-bars"></i>
         </aside>
 
         <h1>{{ title }}</h1>
@@ -42,7 +41,7 @@
     }
 
     header > aside {
-        width: 60px;
+        width: 120px;
         display: flex;
         align-items: center;
         justify-content: center;

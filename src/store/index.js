@@ -73,9 +73,12 @@ const store = new Vuex.Store({
             state.readingLists.currentlyEditing.title = listItem.title;
             state.readingLists.currentlyEditing.link = listItem.link;
         },
-        TOGGLE_READ(state, { index, read}) {
+        TOGGLE_READ(state, {index, read}) {
             console.log('toggle_read');
             state.readingLists.saved[index].read = read;
+        },
+        ADD_LIST_ITEM(state, {listName}) {
+            state.readingLists[listName].push(new ListItem);
         }
 
     },
@@ -91,7 +94,11 @@ const store = new Vuex.Store({
         },
         toggleRead({commit}, payload) {
             commit('TOGGLE_READ', payload);
+        },
+        addListItem({commit}, payload) {
+            commit('ADD_LIST_ITEM', payload);
         }
+
     },
     getters: {
         modals: state => state.ui.modals, 

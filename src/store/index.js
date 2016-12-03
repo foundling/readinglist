@@ -20,26 +20,6 @@ const store = new Vuex.Store({
                     link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
                     read: false
                 }),                
-                new ListItem({
-                    title: 'Python Class talk by Raymond Hettinger',
-                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
-                    read: false
-                }),                
-                new ListItem({
-                    title: 'Python Class talk by Raymond Hettinger',
-                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
-                    read: false
-                }),                
-                new ListItem({
-                    title: 'Python Class talk by Raymond Hettinger',
-                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
-                    read: false
-                }),                
-                new ListItem({
-                    title: 'Python Class talk by Raymond Hettinger',
-                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
-                    read: false
-                })                
 
             ],
             working: [
@@ -69,16 +49,17 @@ const store = new Vuex.Store({
             state.ui.modals[modalType].visible = false;
         },
         COMMIT_EDITED_LIST_ITEM(state, listItem) {
-            console.log(listItem);
             state.readingLists.currentlyEditing.title = listItem.title;
             state.readingLists.currentlyEditing.link = listItem.link;
         },
         TOGGLE_READ(state, {index, read}) {
-            console.log('toggle_read');
             state.readingLists.saved[index].read = read;
         },
         ADD_LIST_ITEM(state, {listName}) {
             state.readingLists[listName].push(new ListItem);
+        },
+        REMOVE_LIST_ITEM(state, {listName, index}) {
+            state.readingLists[listName].splice(index, 1);
         }
 
     },
@@ -97,6 +78,9 @@ const store = new Vuex.Store({
         },
         addListItem({commit}, payload) {
             commit('ADD_LIST_ITEM', payload);
+        },
+        removeListItem({commit}, payload) {
+            commit('REMOVE_LIST_ITEM', payload);
         }
 
     },

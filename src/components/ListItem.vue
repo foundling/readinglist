@@ -29,6 +29,7 @@
 
         <aside class="remove-wrapper">
             <i 
+                v-on:click="removeListItem"
                 class="fa fa-close"
                 v-bind:class="{ 'grayed-out': !read }">
             </i>
@@ -150,6 +151,14 @@
 
                 this.$store.dispatch('openModal', data);
 
+            },
+            removeListItem: function() {
+                const data = {
+                    listName: 'saved',
+                    index: this.index
+                };
+                console.log(this.index);
+                this.$store.dispatch('removeListItem', data);
             }
 
         },

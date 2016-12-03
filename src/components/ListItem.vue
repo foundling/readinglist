@@ -59,7 +59,6 @@
     i {
         margin: 0px;
         padding: 0px;
-        font-size: 1.3em;
     }
 
     .grayed-out {

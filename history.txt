@@ -1,0 +1,501 @@
+   54  rm ../data/formatted/alex_2016-12-01.csv 
+   55  python json_to_csv.py 
+   56  vim ../data/formatted/alex_2016-12-01.csv
+   57  vim json_to_csv.py 
+   58  rm ../data/formatted/alex_2016-12-01.csv 
+   59  python json_to_csv.py 
+   60  vim json_to_csv.py 
+   61  python json_to_csv.py 
+   62  vim ../data/formatted/alex_2016-12-01.csv 
+   63  vim json_to_csv.py 
+   64  python json_to_csv.py 
+   65  vim ../data/formatted/alex_2016-12-01.csv 
+   66  vim json_to_csv.py 
+   67  python json_to_csv.py 
+   68  vim json_to_csv.py 
+   69  vim ../data/formatted/alex_2016-12-01.csv 
+   70  vim json_to_csv.py 
+   71  cd ..
+   72  cd -
+   73  ls
+   74  ipython
+   75  ls
+   76  vim ../data/json/alex_2016-12-01.json 
+   77  ipython
+   78  python
+   79  ssh alexr@192.168.2.9
+   80  ssh alexr@192.168.2.9
+   81  ls /pi 
+   82  ls -ld /pi
+   83  cd /pi
+   84  ls /
+   85  mount -a
+   86  mount
+   87  sudo ls -ld /pi
+   88  sudo chown alexr /pi
+   89  ls -l /pi
+   90  sudo chown alexr:wheel /pi
+   91  ls -ld /pi
+   92  sudo ls -ld /pi
+   93  vim /etc/auto_smb 
+   94  vim /etc/auto_smb 
+   95  sudo vim /etc/auto_smb
+   96  mkdir /Volumes/pi
+   97  ls -ld /Volumes/pi
+   98  rm -rf /pi 
+   99  sudo rm -rf /pi 
+  100  umount /pi
+  101  sudo umount /pi
+  102  ssh alex@208.95.209.27
+  103  ssh alex@128.95.209.27
+  104  vim /data/apps/fbtrack/docs/dev/TIME_LOG.txt 
+  105  git add -A
+  106  gs
+  107  gs
+  108  cd /data/apps/fbtrack/
+  109  ls
+  110  gs
+  111  git -A
+  112  git add -A .
+  113  gs
+  114  git commit -m 'wip. work on json_to_csv python script.js'
+  115  s
+  116  vim docs/dev/TODO.txt 
+  117  git add -A
+  118  gs
+  119  git commit -m "add update plan to todo"
+  120  gpom
+  121  ls
+  122  cd /data/writing/javascript/
+  123  ls
+  124  cd async/
+  125  ls
+  126  vim promises
+  127  vim promises2.
+  128  vim promises2.html 
+  129  vim promises2..j
+  130  vim promises2.js 
+  131  vim p.js
+  132  vim p.js
+  133  cat p.js | pbcopy 
+  134  vim ~/.bashrc 
+  135  ls /private/var/log/asl/*.asl
+  136  ls /private/var/log/asl/
+  137  ls /private/var/log/asl/StoreData 
+  138  vim /private/var/log/asl/StoreData
+  139  type /private/var/log/asl/StoreData
+  140  file /private/var/log/asl/StoreData
+  141  file -h
+  142  file --help
+  143  du -sh /private/var/log/asl
+  144  rm -rf /private/var/log/asl/*
+  145  sudo rm -rf /private/var/log/asl/*
+  146  ls -a /private/var/log/asl/*
+  147  ls -a /private/var/log/asl
+  148  ls
+  149  exit
+  150  exi
+  151  exit
+  152  bash
+  153  bash -il
+  154  exit
+  155  exit
+  156  ls
+  157  bash -il
+  158  man bash
+  159  vim ~/.bash_logout
+  160  . ~/.bash_logout
+  161  exit
+  162  ls
+  163  vim file.txt 
+  164  vim file.txt 
+  165  vim file.txt 
+  166  vim file.txt 
+  167  vim
+  168  vim file.txt 
+  169  rm file.txt 
+  170  ~/.bash_logout
+  171  vim ~/.bash_logout
+  172  . ~/.bash_logout
+  173  . ~/.bash_logout
+  174  vim ~/.bash_logout
+  175  . ~/.bash_logout
+  176  exit
+  177  vim history.txt 
+  178  vim ~/.bash_logout
+  179  rm history.txt 
+  180  exit
+  181  ls
+  182  cd /data/apps/fbtrack/
+  183  ls
+  184  cd app/cli/
+  185  git log
+  186  git show 24bae37996a89f2e91ceb1ac5c4f5a51ace537d4:./querypaths.js 
+  187  cd /data/apps/fbtrack/data/raw/
+  188  vim alex_2016-11-30.json 
+  189  ls -a
+  190  rm .alex_2016-11-30.json.swp 
+  191  vim alex_2016-12-01.json 
+  192  ls -l 
+  193  vim meg_2016-12-01.json 
+  194  vim alex_2016-12-01.json 
+  195  cd ../../
+  196  node bin/fbtrack.js query meg
+  197  vim data/raw/meg_2016-12-0
+  198  vim data/raw/meg_2016-12-02.json 
+  199  vim data/raw/alex_2016-12-01.json 
+  200  vim app/cli/querypaths.js 
+  201  unset -x
+  202  set --help
+  203  man set
+  204  set +x
+  205  ls
+  206  set --help
+  207  vim data/raw/alex_2016-12-01.json 
+  208  vim app/cli/au
+  209  vim app/cli/querypaths.js 
+  210  node bin/fbtrack.js query meg
+  211  vim data/raw/meg_2016-12-02.json 
+  212  ls
+  213  ls
+  214  ls
+  215  cd app/cli/
+  216  ls
+  217  cd ../../data/
+  218  vim ../scripts/pr
+  219  vim ../scripts/json_to_csv.py 
+  220  vim ../docs/dev/MS\ Band\ Data\ Aggregator\ -\ zk\ -\ FINAL.py 
+  221  ls
+  222  ls
+  223  vim ../docs/dev/Long\ Sleep\ MS\ Band\ Data.csv 
+  224  vim ../docs/dev/MS\ Band\ Data\ Aggregator\ -\ zk\ -\ FINAL.py 
+  225  ls
+  226  ls
+  227  vim formatted/alex_2016-12-01.csv 
+  228  ls
+  229  cd /data/apps/fbtrack/
+  230  ls
+  231  cd ../readinglist
+  232  ls
+  233  npm run dev
+  234  exit
+  235  node 
+  236  vim index.js 
+  237  ls
+  238  vim generateQueryPaths.js 
+  239  node
+  240  node
+  241  node
+  242  node
+  243  node
+  244  node
+  245  node
+  246  ls
+  247  vim generateQueryPaths.js 
+  248  node 
+  249  node 
+  250  node 
+  251  vim ../store/index.js 
+  252  node
+  253  ls
+  254  cd .f/b
+  255  cd ../fb
+  256  cd ../fbtr
+  257  ls
+  258  cd ../../fb
+  259  cd ../../../fbtrack/
+  260  cd app/cli/
+  261  ls
+  262  vim generateQueryPaths.js 
+  263  ls
+  264  vim generateQueryPaths.js 
+  265  vim generateQueryPaths.js 
+  266  vim generateQueryPaths.js 
+  267  vim index.js 
+  268  vim index.js 
+  269  vim utils.js 
+  270  grep generate
+  271  grep generate *
+  272  vim generateQueryPaths.js 
+  273  vim generateQueryPaths.js 
+  274  vim index.js 
+  275  vim index.js 
+  276  node ../../bin/fbtrack.js query alex
+  277  vim index.js 
+  278  node ../../bin/fbtrack.js query alex
+  279  vim index.js 
+  280  grep console.log index.js 
+  281  grep console.log *
+  282  vim index.js 
+  283  jshint index.js
+  284  vim index.js 
+  285  vim qu
+  286  ls
+  287  vim generateQueryPaths.js 
+  288  ls
+  289  vim generateQueryPaths.js 
+  290  vim ../../docs/dev/
+  291  vim ../../docs/dev/
+  292  git add -A
+  293  gs
+  294  git commit -m "transitioning to a different query and data interval"
+  295  gpom
+  296  calendar
+  297  cal
+  298  vim ../../docs/dev/TIME_LOG.txt 
+  299  git ad -A
+  300  git add -A
+  301  gpom
+  302  git commit -m "update time log"
+  303  gpom
+  304  ls
+  305  ls
+  306  vim generateQueryPaths.js 
+  307  ls
+  308  ls
+  309  vim index.js 
+  310  exit
+  311  cd /data/apps/fbtrack/
+  312  cd ../readinglist
+  313  ls
+  314  devchrome 
+  315  cd src/components/
+  316  ls
+  317  ls
+  318  vim ListItem.vue 
+  319  ls
+  320  gs
+  321  gl
+  322  git diff
+  323  vim ../../docs/dev/todo.txt 
+  324  cd ../../
+  325  cd src/
+  326  vim A
+  327  ls
+  328  vim components/App.vue 
+  329  ifconfig
+  330  vim components/App.vue 
+  331  vim components/ReadingList.vue 
+  332  ls
+  333  git add -A
+  334  gs
+  335  git commit -m "add transparent tap color. reduce readinglist padding"
+  336  gpom
+  337  vim components/ReadingList.vue 
+  338  vim components/TitleBar.vue 
+  339  ls
+  340  vim store/index.js 
+  341  ls
+  342  ls
+  343  gs
+  344  git add -A
+  345  gs
+  346  git diff --cached
+  347  git diff --cached
+  348  git add -A
+  349  git commit -m "change share wrapper name to settings-wrapper"
+  350  ls
+  351  ls
+  352  ls
+  353  vim components/TitleBar.vue 
+  354  vim components/ListHeader.vue 
+  355  cd components/
+  356  ls
+  357  vim ListItem.vue 
+  358  vim RE
+  359  vim ReadingList.vue 
+  360  vim ListItem.vue 
+  361  vim App.vue 
+  362  vim ListItem.vue 
+  363  grep getters *
+  364  vim ReadingList.vue 
+  365  vim ListItem.vue 
+  366  vim ReadingList.vue 
+  367  ls
+  368  ls
+  369  vim ReadingList.vue 
+  370  git add -A
+  371  gs
+  372  git commit -m "hook list item 'read' property into vuex."
+  373  git add -A
+  374  gs
+  375  git commit -m "hook list item 'read' property into vuex."
+  376  gpom
+  377  cd /data/apps/fbtrack/
+  378  cd data/raw/
+  379  ls
+  380  rm ./*
+  381  lS
+  382  cd ../../app/cron/
+  383  ls
+  384  vim fbtrack_cron.js 
+  385  ls
+  386  vim test.js 
+  387  ls
+  388  vim fbtrack_cron.js 
+  389  ls
+  390  vim fbtrack_cron.js 
+  391  ls
+  392  cd ../cli/
+  393  vim index.js 
+  394  ls
+  395  vim index.js 
+  396  vim querypaths.js 
+  397  vim index.js 
+  398  vim querypaths.js 
+  399  mv querypaths.js generateQueryPaths.js
+  400  vim generateQueryPaths.js 
+  401  vim utils.js 
+  402  vim generateQueryPaths.js 
+  403  jshint generateQueryPaths.js
+  404  vim generateQueryPaths.js 
+  405  node
+  406  vim generateQueryPaths.js 
+  407  node
+  408  node
+  409  ls
+  410  vim index.js 
+  411  node index.js 
+  412  vim index.js 
+  413  cd ../
+  414  ls
+  415  cd ../
+  416  ls
+  417  node bin/fbtrack.js query alex
+  418  vim app/cli/index.js 
+  419  node bin/fbtrack.js query alex
+  420  vim app/cli/index.js 
+  421  node bin/fbtrack.js query alex
+  422  vim app/cli/index.js 
+  423  node bin/fbtrack.js query alex
+  424  vim app/cli/index.js 
+  425  node bin/fbtrack.js query alex
+  426  node bin/fbtrack.js query alex -d 1
+  427  ls
+  428  vim app/cli/index.js 
+  429  node bin/fbtrack.js query alex -d 1
+  430  vim app/cli/index.js 
+  431  vim app/cli/index.js 
+  432  node bin/fbtrack.js query alex -d 1
+  433  node bin/fbtrack.js query alex -d 1
+  434  node bin/fbtrack.js query alex 
+  435  vim app/cli/index.js 
+  436  vim app/cli/index.js 
+  437  node bin/fbtrack.js query alex 
+  438  vim app/cli/index.js 
+  439  node bin/fbtrack.js query alex -d 1
+  440  vim app/cli/generateQueryPaths.js 
+  441  git show app/cli/generateQueryPaths.js 
+  442  git show
+  443  git log
+  444  git show 1bb541e21762d050eec7abf57efbf342a79883bf:./app/cli/generateQueryPaths.js 
+  445  git show 1bb541e21762d050eec7abf57efbf342a79883bf:./app/cli/utils.js 
+  446  vim app/cli/utils.js 
+  447  node bin/fbtrack.js query meg -d 1
+  448  vim app/cli/utils.js 
+  449  vim app/cli/index.js 
+  450  fg
+  451  fg
+  452  vim app/cli/index.js 
+  453  node bin/fbtrack.js query alex
+  454  vim app/cli/index.js 
+  455  node bin/fbtrack.js query alex
+  456  node bin/fbtrack.js query alex -d 1
+  457  node bin/fbtrack.js query alex -d 1
+  458  node bin/fbtrack.js query alex -d 1
+  459  node bin/fbtrack.js query meg
+  460  node bin/fbtrack.js query meg -d 1
+  461  vim data/raw/meg_2016-12-02.json 
+  462  date
+  463  date
+  464  node bin/fbtrack.js query alex
+  465  node bin/fbtrack.js query alex
+  466  node bin/fbtrack.js query alex
+  467  node bin/fbtrack.js query alex -d 1
+  468  node bin/fbtrack.js query alex -d 1
+  469  node bin/fbtrack.js query alex -d 1
+  470  node bin/fbtrack.js query alex -d 1
+  471  node bin/fbtrack.js query alex -d 1
+  472  node bin/fbtrack.js query alex -d 1
+  473  node bin/fbtrack.js query alex -d 1
+  474  node bin/fbtrack.js query alex -d 1
+  475  node bin/fbtrack.js query alex -d 1
+  476  node bin/fbtrack.js query alex -d 1
+  477  node bin/fbtrack.js query alex -d 1
+  478  node bin/fbtrack.js query alex -d 1
+  479  node bin/fbtrack.js query alex -d 1
+  480  node bin/fbtrack.js query alex -d 1
+  481  node bin/fbtrack.js query alex -d 1
+  482  node bin/fbtrack.js query meg -d 1
+  483  vim data/raw/meg_2016-12-02.json 
+  484  node bin/fbtrack.js query alex -d 1
+  485  node bin/fbtrack.js query alex -d 1
+  486  node bin/fbtrack.js query alex -d 1
+  487  ls
+  488  rm data/*
+  489  ls data/
+  490  cd data/raw/
+  491  ls
+  492  rm *
+  493  ls
+  494  cd ../../
+  495  node bin/fbtrack.js query meg -d1
+  496  node bin/fbtrack.js query meg -d1
+  497  vim data/raw/meg_2016-12-02.json 
+  498  node bin/fbtrack.js query meg -d1
+  499  vim data/raw/meg_2016-12-02.json 
+  500  exit
+  501  cd src/components/
+  502  ls
+  503  vim ../store/index.js 
+  504  vim ../models/ListItem.js 
+  505  ls
+  506  ls
+  507  vim ../store/index.js 
+  508  vim ../store/index.js 
+  509  vim TitleBar.vue 
+  510  vim ../store/index.js 
+  511  git diff
+  512  git log
+  513  gs
+  514  git add -A
+  515  gs
+  516  git commit -m 'implement basic add list item'
+  517  vim ../store/index.js 
+  518  vim ReadingList.vue 
+  519  git add -A
+  520  gs
+  521  gs
+  522  git add -A
+  523  gs
+  524  ls
+  525  vim colors.js 
+  526  git commit -m "rework color scheme, bind color to the list item itself. otherwise, when you pop stuff, it's confusing because it looks like it's popping the last item"
+  527  gpom
+  528  ls
+  529  gs
+  530  ls
+  531  vim ../store/index.js 
+  532  vim ../models/ListItem.js 
+  533  ls
+  534  vim ../store/index.js 
+  535  grep colors *
+  536  vim ListItem.vue 
+  537  vim ReadingList.vue 
+  538  vim ListItem.vue 
+  539  git add -A
+  540  gs
+  541  git commit -m "turn colors into a function that returns a random color in range. call this in list item model, effectively binding the color to the vm."
+  542  gpom
+  543  grep 1.3em *
+  544  vim ListItem.vue 
+  545  git add -A
+  546  gs
+  547  git commit -m "reset fa-close icon to 1em font-size
+"
+  548  gpom
+  549  cd ../
+  550  ls
+  551  vim main.js 
+  552  cd ../
+  553  npm install vue-router

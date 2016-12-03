@@ -30,8 +30,7 @@
         <aside class="remove-wrapper">
             <i 
                 v-on:click="removeListItem"
-                class="fa fa-close"
-                v-bind:class="{ 'grayed-out': !read }">
+                class="fa fa-close">
             </i>
         </aside>
     </li>
@@ -61,9 +60,6 @@
         padding: 0px;
     }
 
-    .grayed-out {
-        opacity: 0.8;
-    }
 
     li.readinglist-item {
 

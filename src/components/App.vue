@@ -22,7 +22,7 @@
     a:hover,
     a:active {
         text-decoration: none;
-        color: black;
+        color: rgb(40,40,40);
     }
     ::-webkit-scrollbar {
         display: none;
@@ -30,6 +30,9 @@
         width: 0px;
     }
 
+    i.fa {
+        color: rgb(40,40,40);
+    }
     html, body {
 
         height: 100vh;

@@ -35,6 +35,8 @@
 
         width: calc(100% - 120px);
 
+        color: rgb(40,40,40);
+
         font-size: 1.3em;
         text-shadow: 3px 3px 0px lightgray;
         text-align: center;

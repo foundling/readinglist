@@ -1,3 +1,5 @@
+import appColors from '../plugins/colors';
+
 export default function(options) {
 
     options = options || {};
@@ -5,7 +7,8 @@ export default function(options) {
 
         title: options.title || '',
         link: options.link || '',
-        read: options.read || false
+        read: options.read || false,
+        color: appColors.getColor()
 
     };
 

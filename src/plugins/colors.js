@@ -1,4 +1,5 @@
 const appColors = [
+
     'snow',
     'aliceblue',
     'aquamarine',
@@ -265,4 +266,9 @@ const allColors = [
 
 ];
 
-export default appColors;
+export default {
+    getColor: () => {
+        const index = Math.floor(Math.random() * appColors.length)
+        return appColors[index];
+    }
+};

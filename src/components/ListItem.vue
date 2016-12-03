@@ -1,6 +1,6 @@
 <template>
     <li 
-        v-bind:style="itemColor"
+        v-bind:style="{ background: item.color }"
         class="readinglist-item">
 
         <aside class="toggle-read-write-wrapper">

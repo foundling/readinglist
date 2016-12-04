@@ -3,17 +3,19 @@
     <section class="readinglist">
         <ul class="list-tabs">
             <li 
-                v-on:click="setActiveList('working')"
                 v-bind:class="{ 
-                    'active-list': type === 'working' 
+                    'active-list': listName === 'working' 
                 }"
-                class="list-tab working">working</li>
+                class="list-tab working">
+                </li>
             <li 
-                v-on:click="setActiveList('saved')"
+                v-on:click="toggleActiveList('saved')"
                 v-bind:class="{ 
-                    'active-list': type === 'saved' 
+                    'star-active': listName === 'saved'
                 }"
-                class="list-tab saved">saved</li>
+                class="list-tab saved">
+                    <i class="starred-list fa fa-star-o"></i>
+            </li>
         </ul>
         <ul
             class="readinglist-list">
@@ -30,18 +32,29 @@
 
 <style scoped>
 
-
-    .active-list {
-        background: aquamarine;
+    .star-active {
+        background: gold;    
+    }
+    .starred-list {
+        padding: 5px;
     }
     section.readinglist {
 
-        height: 90vh;
-        padding: 10px; 
+        height: 85vh;
+        padding: 5px 10px 10px 10px; 
         background: whitesmoke;
 
     }
 
+    ul.list-tabs {
+        height: 5vh;
+        display: flex;
+        align-items: center;
+    }
+
+    li.list-tab {
+        margin-right: 5px;
+    }
     li.list-tab {
         display: inline-block;
     }
@@ -87,10 +100,8 @@
             }
         },
         methods: {
-            setActiveList(listName) {
-                this.$store.dispatch('setActiveList', {
-                    listName: listName
-                });
+            toggleActiveList(listName) {
+                this.$store.dispatch('toggleActiveList');
             }
         }
 

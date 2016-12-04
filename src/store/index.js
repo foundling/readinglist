@@ -61,8 +61,9 @@ const store = new Vuex.Store({
             const listItem = state.readingLists.working.splice(index,1);
             state.readingLists.saved.push(listItem);
         },
-        SET_ACTIVE_LIST(state, { listName }) {
-            state.readingLists.activeListName = listName;
+        TOGGLE_ACTIVE_LIST(state) {
+            const listName = state.readingLists.activeListName;
+            state.readingLists.activeListName = (listName === 'saved' ? 'working' : 'saved');
         }
 
     },
@@ -88,8 +89,8 @@ const store = new Vuex.Store({
         addToSavedList({commit}, payload) {
             commit('REMOVE_LIST_ITEM', payload);
         },
-        setActiveList({commit}, payload) {
-            commit('SET_ACTIVE_LIST', payload);
+        toggleActiveList({commit}) {
+            commit('TOGGLE_ACTIVE_LIST');
         }
 
     },

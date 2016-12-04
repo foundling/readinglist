@@ -33,14 +33,18 @@
         </list-header>
 
         <aside class="remove-wrapper">
-            <i
-                v-on:click="addToSavedList"
-                class="fa fa-star">
-            </i>
-            <i 
-                v-on:click="removeListItem"
-                class="fa fa-close">
-            </i>
+            <button>
+                <i
+                    v-on:click="addToSavedList"
+                    class="fa fa-star">
+                </i>
+            </button>
+            <button>
+                <i 
+                    v-on:click="removeListItem"
+                    class="fa fa-close">
+                </i>
+            </button>
         </aside>
     </li>
 </template>
@@ -93,6 +97,7 @@
 
     }
 
+    aside.remove-wrapper,
     aside.toggle-read-write-wrapper {
 
         height: 100%;
@@ -106,11 +111,6 @@
 
     aside.remove-wrapper {
         margin-left: auto;
-    }
-
-    aside.toggle-read-wrapper,
-    aside.remove-wrapper {
-        width: 15%;    
     }
 
     a.readinglist-item-link {

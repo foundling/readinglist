@@ -3,7 +3,17 @@
     <div class="app-container">
 
         <title-bar title="Reading List"></title-bar>
-        <reading-list :list="list"></reading-list>
+
+        <reading-list 
+            v-show="activeListName === 'working'"
+            list-name="working">
+        </reading-list>
+
+        <reading-list 
+            v-show="activeListName === 'saved'"
+            list-name="saved">
+        </reading-list>
+
         <edit-modal></edit-modal>
         <confirm-modal></confirm-modal>
 
@@ -15,6 +25,13 @@
 
     html {
         -webkit-tap-highlight-color: transparent;
+    }
+
+    ul, li {
+        list-style-type: none;
+        margin: 0; 
+        padding: 0;
+
     }
 
     a:link,
@@ -89,6 +106,13 @@
             EditModal,
             ConfirmModal
 
+        },
+        computed:  {
+            activeListName() {
+                return this.$store.getters.activeListName;
+            }
+        },
+        methods: {
         },
         data: function() { return {}; }
     };

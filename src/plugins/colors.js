@@ -5,7 +5,6 @@ const appColors = [
     'springgreen',
     'violet',
     'tomato',
-    'red',
     'orange',
     'yellow',
     'aqua',

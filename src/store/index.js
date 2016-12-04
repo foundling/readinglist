@@ -8,6 +8,7 @@ const store = new Vuex.Store({
     state: {
         readingLists: {
             currentlyEditing: null,
+            activeListName: 'working',
             working: [
 
                 new ListItem({
@@ -59,6 +60,9 @@ const store = new Vuex.Store({
         ADD_TO_SAVED_LIST(state, {index}) {
             const listItem = state.readingLists.working.splice(index,1);
             state.readingLists.saved.push(listItem);
+        },
+        SET_ACTIVE_LIST(state, { listName }) {
+            state.readingLists.activeListName = listName;
         }
 
     },
@@ -83,14 +87,20 @@ const store = new Vuex.Store({
         },
         addToSavedList({commit}, payload) {
             commit('REMOVE_LIST_ITEM', payload);
+        },
+        setActiveList({commit}, payload) {
+            commit('SET_ACTIVE_LIST', payload);
         }
 
     },
     getters: {
-        modals: state => state.ui.modals, 
+        activeListName: state => state.readingLists.activeListName,
         savedList: state => state.readingLists.saved,
         workingList: state => state.readingLists.working,
-        currentlyEditing: state => state.readingLists.currentlyEditing
+        modals: state => state.ui.modals, 
+        currentlyEditing: state => state.readingLists.currentlyEditing,
+
+
     }
 
 });

@@ -1,27 +1,50 @@
 <template>
 
     <section class="readinglist">
-        <ul class="readinglist-list">
+        <ul class="list-tabs">
+            <li 
+                v-on:click="setActiveList('working')"
+                v-bind:class="{ 
+                    'active-list': type === 'working' 
+                }"
+                class="list-tab working">working</li>
+            <li 
+                v-on:click="setActiveList('saved')"
+                v-bind:class="{ 
+                    'active-list': type === 'saved' 
+                }"
+                class="list-tab saved">saved</li>
+        </ul>
+        <ul
+            class="readinglist-list">
             <list-item 
-                v-for="(item, index) in savedList" 
+                v-for="(item, index) in readingList" 
                 :item="item" 
                 :index="index">
             </list-item>
         </ul>
+
     </section>
 
 </template>
 
 <style scoped>
 
+
+    .active-list {
+        background: aquamarine;
+    }
     section.readinglist {
 
-        height: calc(90vh);
+        height: 90vh;
         padding: 10px; 
         background: whitesmoke;
 
     }
 
+    li.list-tab {
+        display: inline-block;
+    }
     ul.readinglist-list {
 
         width: 100%;
@@ -50,17 +73,25 @@
 
     export default {
 
-        props: ['list'],
+        name: 'ReadingList',
+        props: [
+            'listName'
+        ],
         components: {
             ListItem
         },
         computed: {
-            savedList() {
-                return this.$store.getters.workingList
-            }, 
-            workingList() {
-                return this.$store.getters.workingList
-            } 
+            readingList() {
+                const getter = `${this.listName}List`; 
+                return this.$store.getters[getter];
+            }
+        },
+        methods: {
+            setActiveList(listName) {
+                this.$store.dispatch('setActiveList', {
+                    listName: listName
+                });
+            }
         }
 
     };

@@ -1,2 +1,5 @@
-Make a single top-level control for settings, not share, save and add on the right.
-Make sure to catch edge case with the user-supplied link. (no www, no http etc).
+Make sure to catch edge case with the user-supplied link. (no www., no http:// etc).
+allow tag entry for a given item
+introduce the idea of named lists.
+A named list is the result of an aggregated search. what makes it a list is the fact that it's cached as such.
+

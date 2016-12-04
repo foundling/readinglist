@@ -95,21 +95,22 @@
     textarea.modal.title-input,
     textarea.modal.link-input,
     button.commit-edit {
+        margin-top: 2%;
         padding: 2%;
-        margin: 2%;
+    }
+    textarea.modal.link-input {
+        white-space: initial 
     }
 
     textarea.modal.link-input,
-    textarea.modal.title-input {
+    textarea.modal.title-input,
+    button {
         display: block;
         border: 1px solid black;
     }
-    textarea.modal.title-input {
-    }
-    textarea.modal.link-input {
-    }
     button.commit-edit {
         display: block;
+        margin: 2% auto 0% auto;
         width: 90%;
         background: lightgray;
         border: none;

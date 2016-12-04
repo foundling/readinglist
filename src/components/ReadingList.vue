@@ -56,7 +56,7 @@
         },
         computed: {
             savedList() {
-                return this.$store.getters.savedList
+                return this.$store.getters.workingList
             }, 
             workingList() {
                 return this.$store.getters.workingList

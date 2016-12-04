@@ -7,6 +7,7 @@
 
             <button 
                 v-on:click="openModal"
+                v-bind:class="{ 'grayed-out': read }"
                 class="edit-button">
                 <i class="fa fa-pencil"></i>
             </button>
@@ -16,7 +17,11 @@
                 class="bookmark-button">
                 <i 
                     class="fa"
-                    v-bind:class="{'fa-bookmark-o': read, 'fa-bookmark': !read }"></i>
+                    v-bind:class="{
+                        'fa-bookmark-o': read, 
+                        'fa-bookmark': !read, 
+                        'grayed-out': read}">
+                </i>
             </button>
 
         </aside>
@@ -28,6 +33,10 @@
         </list-header>
 
         <aside class="remove-wrapper">
+            <i
+                v-on:click="addToSavedList"
+                class="fa fa-star">
+            </i>
             <i 
                 v-on:click="removeListItem"
                 class="fa fa-close">
@@ -38,6 +47,9 @@
 
 <style scoped>
 
+    .grayed-out {
+        opacity: 0.2;
+    }
     button {
         height: 100%;
         width: 50%;
@@ -116,7 +128,7 @@
         props: ['item', 'index' ],
         computed: {
             read: function() {
-                return this.$store.state.readingLists.saved[this.index].read;
+                return this.$store.state.readingLists.working[this.index].read;
             },
             itemColor: function() {
                 return {
@@ -130,17 +142,17 @@
 
                 const data = {
                     index: this.index,
-                    read: !this.read
+                    read: !this.read,
+                    listName: 'working'
                 };
 
                 this.$store.dispatch('toggleRead', data);
             },
-
             openModal: function() {
 
                 const data = {
                     modalType: 'EditModal', 
-                    listType: 'saved',
+                    listType: 'working',
                     listItemIndex: this.index
                 };
 
@@ -149,11 +161,17 @@
             },
             removeListItem: function() {
                 const data = {
-                    listName: 'saved',
+                    listName: 'working',
                     index: this.index
                 };
-                console.log(this.index);
                 this.$store.dispatch('removeListItem', data);
+            },
+            addToSavedList: function() {
+                const data = {
+                    index: this.index
+                };
+                this.$store.dispatch('addToSavedList', data); 
+
             }
 
         },

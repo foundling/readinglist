@@ -8,26 +8,21 @@ const store = new Vuex.Store({
     state: {
         readingLists: {
             currentlyEditing: null,
-            saved: [
-
-                new ListItem({
-                    title: 'Python Class talk by Raymond Hettinger',
-                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
-                    read: false
-                }),                
-                new ListItem({
-                    title: 'Python Class talk by Raymond Hettinger',
-                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
-                    read: false
-                }),                
-
-            ],
             working: [
+
                 new ListItem({
-                    title: 'Concurrency Model and Event Loop',
-                    link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop'
-                })                
+                    title: 'Python Class talk by Raymond Hettinger',
+                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
+                    read: false
+                }),                
+                new ListItem({
+                    title: 'Python Class talk by Raymond Hettinger',
+                    link: 'https://www.youtube.com/watch?v=HTLu2DFOdTg',
+                    read: false
+                }),                
+
             ],
+            saved: [],
         },
         ui: {
             modals: {
@@ -52,14 +47,18 @@ const store = new Vuex.Store({
             state.readingLists.currentlyEditing.title = listItem.title;
             state.readingLists.currentlyEditing.link = listItem.link;
         },
-        TOGGLE_READ(state, {index, read}) {
-            state.readingLists.saved[index].read = read;
+        TOGGLE_READ(state, {index, listName, read}) {
+            state.readingLists[listName][index].read = read;
         },
         ADD_LIST_ITEM(state, {listName}) {
             state.readingLists[listName].push(new ListItem);
         },
         REMOVE_LIST_ITEM(state, {listName, index}) {
             state.readingLists[listName].splice(index, 1);
+        },
+        ADD_TO_SAVED_LIST(state, {index}) {
+            const listItem = state.readingLists.working.splice(index,1);
+            state.readingLists.saved.push(listItem);
         }
 
     },
@@ -80,6 +79,9 @@ const store = new Vuex.Store({
             commit('ADD_LIST_ITEM', payload);
         },
         removeListItem({commit}, payload) {
+            commit('REMOVE_LIST_ITEM', payload);
+        },
+        addToSavedList({commit}, payload) {
             commit('REMOVE_LIST_ITEM', payload);
         }
 

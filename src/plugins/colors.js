@@ -1,6 +1,5 @@
 const appColors = [
 
-    'snow',
     'aliceblue',
     'aquamarine',
     'springgreen',

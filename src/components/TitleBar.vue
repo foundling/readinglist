@@ -68,7 +68,7 @@
         props: ['title'],
         methods: {
             addListItem: function() {
-                this.$store.dispatch('addListItem', {listName: 'saved'});
+                this.$store.dispatch('addListItem', {listName: 'working'});
             }
         },
     };

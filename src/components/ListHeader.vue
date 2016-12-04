@@ -12,7 +12,9 @@
         font-weight: 100;
     }
     a.readinglist-item-link {
-        width: 60%;
+        width: 58%;
+        margin: 0 auto;
+        overflow-x: scroll;
     }
     a.read {
         opacity: 0.2;

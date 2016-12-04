@@ -33,13 +33,15 @@
         </list-header>
 
         <aside class="remove-wrapper">
-            <button>
+            <button
+                v-bind:class="{ 'grayed-out': read }">
                 <i
                     v-on:click="addToSavedList"
                     class="fa fa-star">
                 </i>
             </button>
-            <button>
+            <button
+                v-bind:class="{ 'grayed-out': read }">
                 <i 
                     v-on:click="removeListItem"
                     class="fa fa-close">
@@ -73,7 +75,8 @@
 
     i {
         margin: 0px;
-        padding: 0px;
+        padding: 10px;
+        background: whitesmoke;
     }
 
 
@@ -113,9 +116,6 @@
         margin-left: auto;
     }
 
-    a.readinglist-item-link {
-        overflow-x: scroll;
-    }
 </style>
 
 <script>
